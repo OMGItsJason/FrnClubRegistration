@@ -1,0 +1,121 @@
+﻿<Window
+    x:Class="FrnClubRegistration.FrmUpdateMember"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="FrmUpdateMember"
+    Width="300"
+    Height="510"
+    Loaded="Window_Loaded"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ToolWindow"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="265*" />
+            <RowDefinition Height="209*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" Text="Student ID:" />
+                <TextBlock
+                    x:Name="noti"
+                    Margin="40,0,0,0"
+                    VerticalAlignment="Bottom"
+                    FontSize="12"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="Please Select Student ID!"
+                    Visibility="Collapsed" />
+            </StackPanel>
+
+            <ComboBox
+                x:Name="studentCB"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18"
+                SelectionChanged="studentCB_SelectionChanged" />
+            <TextBlock FontSize="18" Text="Last Name:" />
+            <TextBox
+                x:Name="lastNameTb"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18"
+                IsEnabled="False" />
+            <TextBlock FontSize="18" Text="First Name:" />
+            <TextBox
+                x:Name="firstNameTb"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18"
+                IsEnabled="False" />
+            <TextBlock FontSize="18" Text="Middle Name:" />
+            <TextBox
+                x:Name="middleNameTb"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18"
+                IsEnabled="False" />
+            <TextBlock FontSize="18" Text="Age:" />
+            <TextBox
+                x:Name="ageTb"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18" />
+            <TextBlock FontSize="18" Text="Gender:" />
+            <ComboBox
+                x:Name="GenderCB"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18"
+                IsEnabled="False" />
+            <TextBlock FontSize="18" Text="Program:" />
+            <ComboBox
+                x:Name="programCB"
+                Height="30"
+                VerticalContentAlignment="Center"
+                FontSize="18" />
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    x:Name="confirmBtn"
+                    Width="120"
+                    Height="40"
+                    Margin="10,10,0,0"
+                    Click="confirmBtn_Click"
+                    Content="Confirm"
+                    FontSize="18" />
+                <Button
+                    x:Name="cancelBtn"
+                    Width="120"
+                    Height="40"
+                    Margin="5,10,0,0"
+                    Click="cancelBtn_Click"
+                    Content="Cancel"
+                    FontSize="18" />
+            </StackPanel>
+            <TextBlock
+                x:Name="updated"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                FontSize="12"
+                FontWeight="Bold"
+                Foreground="LimeGreen"
+                Text="Updated Successfully!"
+                Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
+</Window>
